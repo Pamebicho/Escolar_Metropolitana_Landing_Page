@@ -7,7 +7,7 @@
       name="description"
       content="Copa Escolar Metropolitana: campeonato de fútbol entre colegios de la Región Metropolitana."
     />
-    <title>Copa Escolar Metropolitana</title>
+    <title>Copa Escolar RM</title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Poppins:wght@300;400;500;600&display=swap"
@@ -19,7 +19,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
@@ -77,65 +77,60 @@
 
     <main>
       <!-- ── HERO ── -->
-      <section id="inicio" class="hero-section position-relative">
+      <section id="inicio" class="hero-section">
         <div class="stadium-bg"></div>
         <div class="hero-overlay-dark"></div>
 
-        <div class="container hero-content position-relative">
-          <div class="row align-items-center gy-4">
+        <div class="container hero-content">
+          <div class="row align-items-center g-5">
             <div class="col-lg-7">
-              <p class="hero-tag">Campeonato escolar · Región Metropolitana</p>
-
-              <h1 class="hero-title mb-3">
-                Copa Escolar<br />
-                Metropolitana <span>2025</span>
-              </h1>
-
-              <p class="hero-subtitle mb-4">
-                Inscribe a tu colegio en un torneo pensado para los equipos
-                escolares: <strong>mínimo 4 partidos garantizados</strong>,
-                ambiente familiar y experiencia profesional.
-              </p>
-
-              <div class="d-flex flex-column flex-md-row gap-3 mb-4">
-                <a href="#inscripcion" class="btn btn-accent btn-lg fw-semibold"
-                  >Inscribir ahora</a
+              <div class="hero-copy reveal">
+                <span class="hero-tag"
+                  >Campeonato escolar oficial · Región Metropolitana</span
                 >
-                <a
-                  href="#campeonato"
-                  class="btn btn-outline-light btn-lg hero-secondary-btn"
-                  >Ver detalles</a
-                >
-              </div>
 
-              <div class="d-flex flex-wrap hero-badges gap-2">
-                <div class="hero-badge">
-                  <span class="badge-label"
-                    ><i class="bi bi-people-fill me-1"></i>Categorías</span
-                  >
-                  <p>Sub-12 · Sub-14 · Sub-16</p>
-                </div>
-                <div class="hero-badge">
-                  <span class="badge-label"
-                    ><i class="bi bi-diagram-3-fill me-1"></i>Formato</span
-                  >
-                  <p>Grupos + Playoffs</p>
-                </div>
-                <div class="hero-badge">
-                  <span class="badge-label"
-                    ><i class="bi bi-geo-alt-fill me-1"></i>Sede</span
-                  >
-                  <p>Santiago · RM</p>
-                </div>
-              </div>
+                <h1 class="hero-title">
+                  Copa Escolar <span>Metropolitana 2025</span>
+                  <small class="hero-title-support d-block">
+                    El campeonato que tu colegio merece jugar
+                  </small>
+                </h1>
 
-              <!-- Cuenta regresiva -->
-              <div id="cuenta-regresiva" class="mt-4">
-                <div class="countdown-card text-center">
-                  <p class="countdown-label mb-3">Inicio del campeonato en</p>
+                <p class="hero-subtitle">
+                  Inscribe a tu colegio en un torneo pensado para el deporte
+                  escolar: mínimo 4 partidos garantizados, organización formal,
+                  ambiente familiar y una experiencia competitiva de alto nivel.
+                </p>
+
+                <div class="hero-actions d-flex flex-wrap gap-3 mt-4">
+                  <a href="#inscripcion" class="btn btn-accent">
+                    Inscribir colegio
+                  </a>
+                  <a
+                    href="#formatos"
+                    class="btn btn-outline-light hero-secondary-btn"
+                  >
+                    Ver formato del campeonato
+                  </a>
+                </div>
+                <div class="countdown-card mt-4 reveal reveal-delay-1">
                   <div
-                    class="d-flex justify-content-center gap-2 flex-wrap countdown-values"
+                    class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3"
                   >
+                    <div>
+                      <div class="countdown-label">
+                        Cuenta regresiva para el inicio del torneo
+                      </div>
+                      <div
+                        id="cd-message"
+                        class="small text-light-emphasis mt-1"
+                      >
+                        Inicio estimado del campeonato
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-wrap gap-3 justify-content-start">
                     <div class="countdown-item">
                       <span id="cd-days" class="countdown-number">00</span>
                       <span class="countdown-unit">Días</span>
@@ -146,50 +141,47 @@
                     </div>
                     <div class="countdown-item">
                       <span id="cd-minutes" class="countdown-number">00</span>
-                      <span class="countdown-unit">Min</span>
+                      <span class="countdown-unit">Minutos</span>
                     </div>
                     <div class="countdown-item">
                       <span id="cd-seconds" class="countdown-number">00</span>
-                      <span class="countdown-unit">Seg</span>
+                      <span class="countdown-unit">Segundos</span>
                     </div>
                   </div>
-                  <p id="cd-message" class="small text-muted mt-2 mb-0"></p>
                 </div>
               </div>
             </div>
 
-            <div class="col-lg-5 d-none d-lg-block">
-              <div class="hero-player-wrapper">
+            <div class="col-lg-5">
+              <div class="hero-player-wrapper reveal reveal-delay-2">
                 <img
-                  src="assets/images/jugador.png"
-                  alt="Jugador de fútbol"
-                  class="hero-player-img"
+                  src="assets/img/hero/player.png"
+                  alt="Jugador de fútbol representando la Copa Escolar Metropolitana"
+                  class="hero-player-img img-fluid"
                 />
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Franja verde -->
-        <div class="hero-field-strip">
-          <div class="container py-4">
-            <div class="row align-items-center g-4">
-              <div class="col-lg-7">
-                <h2 class="field-title mb-1">
-                  Fútbol escolar con enfoque formativo
-                </h2>
+        <div class="container">
+          <div class="hero-field-strip reveal reveal-delay-3">
+            <div class="row align-items-center g-4 px-4 py-4">
+              <div class="col-lg-4">
+                <h2 class="field-title mb-2">Mucho más que un campeonato</h2>
                 <p class="field-text mb-0">
-                  Cada colegio participa con sus selecciones oficiales. Se
-                  asegura una cantidad mínima de partidos por equipo para que
-                  todos vivan la experiencia completa del campeonato.
+                  Una experiencia deportiva escolar con organización seria,
+                  enfoque formativo y un entorno pensado para competir con
+                  respeto.
                 </p>
               </div>
-              <div class="col-lg-5">
-                <div class="d-flex flex-wrap gap-2 justify-content-lg-end">
-                  <div class="field-pill">Torneo de invierno</div>
-                  <div class="field-pill">Torneo de primavera</div>
-                  <div class="field-pill">Árbitros certificados</div>
-                  <div class="field-pill">Cobertura multimedia</div>
+
+              <div class="col-lg-8">
+                <div class="d-flex flex-wrap gap-3 justify-content-lg-end">
+                  <span class="field-pill">Árbitros certificados</span>
+                  <span class="field-pill">Cobertura multimedia</span>
+                  <span class="field-pill">Premiación oficial</span>
+                  <span class="field-pill">Ambiente familiar</span>
                 </div>
               </div>
             </div>
@@ -204,8 +196,9 @@
             <p class="section-overline">Cómo funciona</p>
             <h2 class="section-title">Formato del campeonato</h2>
             <p class="section-subtitle">
-              Una estructura pensada para que ningún equipo quede fuera en el
-              primer partido.
+              Una estructura pensada para que cada colegio compita con orden,
+              claridad y una experiencia deportiva que va más allá de un solo
+              partido.
             </p>
           </div>
 
@@ -218,10 +211,12 @@
                 </div>
                 <p class="info-card-text">
                   Equipos organizados en grupos por categoría. Todos se
-                  enfrentan entre sí, sumando puntos por triunfo y empate.
+                  enfrentan entre sí, sumando puntos por triunfo y empate para
+                  avanzar con una base competitiva clara.
                 </p>
               </article>
             </div>
+
             <div class="col-md-4 reveal reveal-delay-2">
               <article class="info-card h-100" data-num="02">
                 <div class="d-flex align-items-center gap-2 mb-3">
@@ -229,11 +224,13 @@
                   <h3 class="info-card-title mb-0">Playoffs</h3>
                 </div>
                 <p class="info-card-text">
-                  Los mejores pasan a cuartos, semifinales y final. Se incluye
-                  partido por tercer lugar en cada categoría.
+                  Los mejores equipos avanzan a cuartos, semifinales y final.
+                  Cada categoría incluye una etapa decisiva pensada para dar
+                  emoción y cierre competitivo al torneo.
                 </p>
               </article>
             </div>
+
             <div class="col-md-4 reveal reveal-delay-3">
               <article class="info-card h-100" data-num="03">
                 <div class="d-flex align-items-center gap-2 mb-3">
@@ -241,17 +238,60 @@
                   <h3 class="info-card-title mb-0">Minutos garantizados</h3>
                 </div>
                 <p class="info-card-text">
-                  Cada equipo juega varios partidos antes de la eliminación,
-                  privilegiando la participación y el juego limpio.
+                  Cada equipo disputa varios encuentros antes de una eventual
+                  eliminación, privilegiando la participación, la continuidad y
+                  el juego limpio.
                 </p>
               </article>
+            </div>
+          </div>
+
+          <div class="format-highlights reveal mt-5">
+            <div class="row g-3">
+              <div class="col-md-4">
+                <article class="format-highlight-card h-100">
+                  <span class="format-highlight-label">Categorías</span>
+                  <h3 class="format-highlight-title">
+                    Sub-12 · Sub-14 · Sub-16
+                  </h3>
+                  <p class="format-highlight-text">
+                    Niveles organizados para promover encuentros más
+                    equilibrados y una competencia acorde a cada etapa escolar.
+                  </p>
+                </article>
+              </div>
+
+              <div class="col-md-4">
+                <article class="format-highlight-card h-100">
+                  <span class="format-highlight-label">Formato general</span>
+                  <h3 class="format-highlight-title">Mínimo 4 partidos</h3>
+                  <p class="format-highlight-text">
+                    Una estructura que favorece la participación, entrega
+                    continuidad y permite que cada equipo viva una experiencia
+                    completa.
+                  </p>
+                </article>
+              </div>
+
+              <div class="col-md-4">
+                <article class="format-highlight-card h-100">
+                  <span class="format-highlight-label">Enfoque</span>
+                  <h3 class="format-highlight-title">
+                    Competencia + formación
+                  </h3>
+                  <p class="format-highlight-text">
+                    El campeonato combina organización, respeto, juego limpio y
+                    desarrollo deportivo en un entorno competitivo y familiar.
+                  </p>
+                </article>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- ── PREMIOS ── -->
-      <section id="premios" class="section-padding section-green">
+      <section id="premios" class="section-padding section-prizes">
         <div class="container">
           <div class="text-center mb-5 reveal">
             <p class="section-overline">Reconocimientos</p>
@@ -266,7 +306,7 @@
             <div class="col-6 col-md-3 reveal reveal-delay-1">
               <div class="prize-card text-center">
                 <div class="prize-icon">
-                  <img src="assets/images/medalla.webp" alt="Medalla" />
+                  <img src="assets/img/prizes/medalla.webp" alt="Medalla" />
                 </div>
                 <h3 class="prize-title">Medallas</h3>
                 <p class="prize-text">
@@ -277,7 +317,7 @@
             <div class="col-6 col-md-3 reveal reveal-delay-2">
               <div class="prize-card text-center">
                 <div class="prize-icon">
-                  <img src="assets/images/copa.jpg" alt="Copa" />
+                  <img src="assets/img/prizes/copa.jpg" alt="Copa" />
                 </div>
                 <h3 class="prize-title">Copa campeonato</h3>
                 <p class="prize-text">
@@ -288,7 +328,7 @@
             <div class="col-6 col-md-3 reveal reveal-delay-3">
               <div class="prize-card text-center">
                 <div class="prize-icon">
-                  <img src="assets/images/guante.jpg" alt="Guante de oro" />
+                  <img src="assets/img/prizes/guante.jpg" alt="Guante de oro" />
                 </div>
                 <h3 class="prize-title">Distinciones</h3>
                 <p class="prize-text">
@@ -338,21 +378,21 @@
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img
-                  src="assets/images/galeria5.jpg"
+                  src="assets/img/gallery/galeria5.jpg"
                   class="d-block w-100"
                   alt="Partido escolar 1"
                 />
               </div>
               <div class="carousel-item">
                 <img
-                  src="assets/images/galeria6.webp"
+                  src="assets/img/gallery/galeria6.webp"
                   class="d-block w-100"
                   alt="Partido escolar 2"
                 />
               </div>
               <div class="carousel-item">
                 <img
-                  src="assets/images/galeria3.jpg"
+                  src="assets/img/gallery/galeria3.jpg"
                   class="d-block w-100"
                   alt="Partido escolar 3"
                 />
@@ -524,7 +564,7 @@
             <div class="col-6 col-md-3 reveal reveal-delay-1">
               <div class="sponsor-card">
                 <img
-                  src="assets/images/sponsors/redbullenergydrink.svg"
+                  src="assets/img/sponsors/redbullenergydrink.svg"
                   alt="Red Bull"
                   class="img-fluid sponsor-logo"
                 />
@@ -533,7 +573,7 @@
             <div class="col-6 col-md-3 reveal reveal-delay-2">
               <div class="sponsor-card">
                 <img
-                  src="assets/images/sponsors/adidas.svg"
+                  src="assets/img/sponsors/adidas.svg"
                   alt="Adidas"
                   class="img-fluid sponsor-logo"
                 />
@@ -542,7 +582,7 @@
             <div class="col-6 col-md-3 reveal reveal-delay-3">
               <div class="sponsor-card">
                 <img
-                  src="assets/images/sponsors/banco-santander-logo.svg"
+                  src="assets/img/sponsors/banco-santander-logo.svg"
                   alt="Banco Santander"
                   class="img-fluid sponsor-logo"
                 />
@@ -555,121 +595,175 @@
       <!-- ── FORMULARIO ── -->
       <section id="inscripcion" class="section-padding section-dark-bottom">
         <div class="container">
-          <div class="text-center mb-5 reveal">
-            <p class="section-overline">Únete</p>
-            <h2 class="section-title">Inscribe tu colegio</h2>
-            <p class="section-subtitle">
-              Completa el formulario y recibirás por correo las bases, valores y
-              calendario del campeonato.
-            </p>
-          </div>
-
           <div class="row justify-content-center">
-            <div class="col-lg-7 reveal">
-              <div class="inscription-card">
-                <form id="inscriptionForm" novalidate>
-                  <div class="row g-3">
-                    <div class="col-12">
-                      <label for="colegio" class="form-label"
-                        >Nombre del colegio</label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="colegio"
-                        placeholder="Ej: Colegio San Patricio"
-                        required
-                      />
-                      <div class="invalid-feedback">
-                        Ingresa el nombre del colegio.
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <label for="comuna" class="form-label">Comuna</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="comuna"
-                        placeholder="Ej: Ñuñoa"
-                        required
-                      />
-                      <div class="invalid-feedback">
-                        Indica la comuna del establecimiento.
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <label for="categoria" class="form-label"
-                        >Categoría principal</label
-                      >
-                      <select id="categoria" class="form-select" required>
-                        <option value="">Seleccionar…</option>
-                        <option>Sub-12</option>
-                        <option>Sub-14</option>
-                        <option>Sub-16</option>
-                        <option>Mixto amistoso</option>
-                      </select>
-                      <div class="invalid-feedback">
-                        Selecciona una categoría.
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <label for="nombreContacto" class="form-label"
-                        >Nombre de contacto</label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="nombreContacto"
-                        placeholder="Nombre completo"
-                        required
-                      />
-                      <div class="invalid-feedback">
-                        Ingresa el nombre de la persona responsable.
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <label for="email" class="form-label"
-                        >Correo electrónico</label
-                      >
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="email"
-                        placeholder="correo@colegio.cl"
-                        required
-                      />
-                      <div class="invalid-feedback">
-                        Ingresa un correo válido.
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <label for="mensaje" class="form-label"
-                        >Mensaje adicional
-                        <span class="text-muted">(opcional)</span></label
-                      >
-                      <textarea
-                        id="mensaje"
-                        class="form-control"
-                        rows="3"
-                        placeholder="Cantidad estimada de equipos, cursos, comentarios…"
-                      ></textarea>
-                    </div>
-                    <div
-                      class="col-12 d-flex flex-column flex-md-row justify-content-between align-items-md-center mt-2 gap-2"
-                    >
-                      <p class="small mb-0 text-muted">
-                        * Respuesta en un máximo de 48 horas hábiles.
-                      </p>
-                      <button
-                        type="submit"
-                        class="btn btn-accent fw-semibold px-4"
-                      >
-                        Enviar inscripción
-                      </button>
-                    </div>
-                    <div id="formMessage" class="mt-2 small"></div>
+            <div class="col-lg-10">
+              <div class="text-center mb-5 reveal">
+                <p class="section-overline">Inscripción</p>
+                <h2 class="section-title">Inscribe a tu colegio</h2>
+                <p class="section-subtitle">
+                  Completa el formulario y nuestro equipo se pondrá en contacto
+                  para entregar la información del campeonato, fechas y pasos de
+                  participación.
+                </p>
+              </div>
+
+              <div class="inscription-wrapper reveal reveal-delay-1">
+                <div class="inscription-intro">
+                  <div class="inscription-intro-item">
+                    <i class="bi bi-envelope-check-fill"></i>
+                    <span>Respuesta por correo en máximo 48 horas hábiles</span>
                   </div>
-                </form>
+                  <div class="inscription-intro-item">
+                    <i class="bi bi-shield-check"></i>
+                    <span
+                      >Información clara y proceso de inscripción guiado</span
+                    >
+                  </div>
+                  <div class="inscription-intro-item">
+                    <i class="bi bi-people-fill"></i>
+                    <span>Dirigido a colegios de la Región Metropolitana</span>
+                  </div>
+                </div>
+
+                <div class="inscription-card">
+                  <form id="inscriptionForm" novalidate>
+                    <div class="row g-4">
+                      <div class="col-md-6">
+                        <label for="schoolName" class="form-label"
+                          >Nombre del colegio</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="schoolName"
+                          name="schoolName"
+                          placeholder="Ejemplo: Colegio San Martín"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Ingresa el nombre del colegio.
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <label for="contactName" class="form-label"
+                          >Nombre del contacto</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="contactName"
+                          name="contactName"
+                          placeholder="Ejemplo: María González"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Ingresa el nombre de la persona responsable.
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <label for="contactEmail" class="form-label"
+                          >Correo electrónico</label
+                        >
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="contactEmail"
+                          name="contactEmail"
+                          placeholder="contacto@colegio.cl"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Ingresa un correo válido.
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <label for="contactPhone" class="form-label"
+                          >Teléfono de contacto</label
+                        >
+                        <input
+                          type="tel"
+                          class="form-control"
+                          id="contactPhone"
+                          name="contactPhone"
+                          placeholder="+56 9 1234 5678"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Ingresa un teléfono de contacto.
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <label for="category" class="form-label"
+                          >Categoría de interés</label
+                        >
+                        <select
+                          class="form-select"
+                          id="category"
+                          name="category"
+                          required
+                        >
+                          <option value="" selected disabled>
+                            Selecciona una categoría
+                          </option>
+                          <option value="sub12">Sub-12</option>
+                          <option value="sub14">Sub-14</option>
+                          <option value="sub16">Sub-16</option>
+                          <option value="multiple">Más de una categoría</option>
+                        </select>
+                        <div class="invalid-feedback">
+                          Selecciona una categoría.
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <label for="schoolDistrict" class="form-label"
+                          >Comuna</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="schoolDistrict"
+                          name="schoolDistrict"
+                          placeholder="Ejemplo: Peñalolén"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Ingresa la comuna del colegio.
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <label for="message" class="form-label"
+                          >Mensaje adicional</label
+                        >
+                        <textarea
+                          class="form-control"
+                          id="message"
+                          name="message"
+                          rows="5"
+                          placeholder="Cuéntanos si quieres inscribir más de una categoría o si necesitas información adicional."
+                        ></textarea>
+                      </div>
+
+                      <div class="col-12">
+                        <div class="inscription-actions">
+                          <button type="submit" class="btn btn-accent btn-lg">
+                            Solicitar inscripción
+                          </button>
+                          <p class="inscription-note mb-0">
+                            Al enviar este formulario, recibirás información de
+                            contacto y próximos pasos para participar.
+                          </p>
+                        </div>
+                        <div id="formMessage" class="mt-3 small"></div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
@@ -748,6 +842,9 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/countdown.js"></script>
+    <script src="assets/js/form.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>

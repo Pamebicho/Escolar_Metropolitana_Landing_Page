@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Poppins:wght@300;400;500;600&display=swap");
+
+:root {
+  --bg-main: #040712;
+  --bg-panel: #080e1e;
+  --bg-panel-soft: #0d1528;
+  --bg-surface: #111827;
+  --bg-green: #1a8c20;
+  --bg-green-soft: #22a829;
+  --accent: #ffc432;
+  --accent-soft: #ffe07f;
+  --accent-dim: rgba(255, 196, 50, 0.15);
+  --green-glow: rgba(26, 140, 32, 0.25);
+  --text-main: #f0f4ff;
+  --text-muted: #8892a4;
+  --border-soft: rgba(255, 255, 255, 0.07);
+  --border-mid: rgba(255, 255, 255, 0.13);
+  --radius-lg: 1.25rem;
+  --radius-md: 0.875rem;
+  --radius-sm: 0.5rem;
+  --radius-round: 999px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 68px;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: "Poppins", system-ui, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  overflow: hidden;
+}
+
+.section-padding {
+  padding-block: 5.5rem;
+}
+
+.section-dark {
+  background: var(--bg-main);
+  position: relative;
+}
+
+.section-dark-bottom {
+  background: var(--bg-main);
+  padding-bottom: 5rem;
+}
+
+.section-green {
+  background: linear-gradient(
+    170deg,
+    rgba(26, 140, 32, 0.15) 0%,
+    transparent 60%
+  );
+  position: relative;
+}
+
+/* reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 {
+  transition-delay: 0.08s;
+}
+
+.reveal-delay-2 {
+  transition-delay: 0.16s;
+}
+
+.reveal-delay-3 {
+  transition-delay: 0.24s;
+}

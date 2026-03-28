@@ -1,0 +1,709 @@
+.logo-text {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 900;
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-main) !important;
+}
+
+.logo-text span {
+  color: var(--accent);
+}
+
+.btn-accent {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #111;
+  border-radius: var(--radius-round);
+  padding-inline: 1.6rem;
+  font-weight: 600;
+  transition:
+    background 0.2s,
+    transform 0.15s;
+}
+
+.btn-accent:hover {
+  background-color: var(--accent-soft);
+  border-color: var(--accent-soft);
+  color: #111;
+  transform: translateY(-1px);
+}
+
+.btn-accent:active {
+  transform: scale(0.97);
+}
+
+.btn-outline-accent {
+  border: 1.5px solid var(--accent);
+  color: var(--accent) !important;
+  border-radius: var(--radius-round);
+  padding: 0.35rem 1.2rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.btn-outline-accent:hover {
+  background: var(--accent);
+  color: #111 !important;
+}
+
+.hero-secondary-btn {
+  border-radius: var(--radius-round);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: var(--text-main);
+  font-weight: 500;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+
+.hero-secondary-btn:hover {
+  border-color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--text-main);
+}
+
+.section-title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+}
+
+.section-overline {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.section-overline::before,
+.section-overline::after {
+  content: "";
+  width: 28px;
+  height: 1.5px;
+  background: var(--accent);
+  opacity: 0.5;
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  max-width: 580px;
+  margin: 0.5rem auto 0;
+  font-size: 0.92rem;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+/* hero badges */
+.hero-badge {
+  background: rgba(8, 14, 30, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-mid);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1.1rem;
+  min-width: 155px;
+}
+
+.hero-badge .badge-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+  display: block;
+}
+
+.hero-badge p {
+  font-size: 0.82rem;
+  font-weight: 500;
+  margin: 0;
+  color: var(--text-main);
+}
+
+/* countdown */
+.countdown-card {
+  max-width: 480px;
+  padding: 1.6rem 1.5rem;
+  border-radius: var(--radius-lg);
+  background: rgba(8, 14, 30, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-mid);
+  box-shadow: 0 0 40px rgba(255, 196, 50, 0.08);
+}
+
+.countdown-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.countdown-item {
+  min-width: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-number {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--text-main);
+  transition: color 0.2s;
+}
+
+.countdown-item:hover .countdown-number {
+  color: var(--accent);
+}
+
+.countdown-unit {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+/* format cards */
+.info-card {
+  background: var(--bg-panel);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-soft);
+  border-top: 3px solid var(--accent);
+  padding: 1.75rem 1.5rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.2s,
+    box-shadow 0.3s;
+}
+
+.info-card::before {
+  content: attr(data-num);
+  position: absolute;
+  bottom: -0.3rem;
+  right: 0.75rem;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 5rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.04);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+  border-top-color: var(--accent-soft);
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.35),
+    0 0 0 1px var(--border-soft);
+}
+
+.info-card-title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.info-card-text {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* prize cards */
+.prize-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04) 0%,
+    rgba(17, 24, 39, 0.95) 100%
+  );
+  border: 1px solid rgba(255, 196, 50, 0.15);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.25rem;
+  height: 100%;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.2s ease;
+}
+
+.prize-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.35),
+    0 0 25px rgba(255, 196, 50, 0.15);
+}
+
+.prize-icon {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 1.2rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 196, 50, 0.25) 0%,
+    rgba(255, 196, 50, 0.08) 60%,
+    transparent 100%
+  );
+
+  border: 1px solid rgba(255, 196, 50, 0.3);
+  box-shadow: 0 0 30px rgba(255, 196, 50, 0.15);
+}
+
+.prize-icon img {
+  max-width: 75px;
+  max-height: 75px;
+  object-fit: contain;
+}
+
+.prize-title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.prize-text {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.section-prizes {
+  background: linear-gradient(
+    180deg,
+    var(--bg-main) 0%,
+    rgba(255, 196, 50, 0.03) 50%,
+    var(--bg-main) 100%
+  );
+}
+
+/* accordion */
+.accordion-item {
+  background: var(--bg-panel) !important;
+  border: 1px solid var(--border-soft) !important;
+  border-radius: var(--radius-md) !important;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.accordion-item:hover {
+  border-color: var(--border-mid) !important;
+}
+
+.accordion-button {
+  background: transparent !important;
+  color: var(--text-main) !important;
+  font-weight: 500;
+  font-size: 0.92rem;
+  box-shadow: none !important;
+  padding: 1.1rem 1.25rem;
+}
+
+.accordion-button:not(.collapsed),
+.accordion-button:hover {
+  color: var(--accent) !important;
+}
+
+.accordion-button::after,
+.accordion-button:not(.collapsed)::after {
+  filter: brightness(0) saturate(100%) invert(78%) sepia(60%) saturate(600%)
+    hue-rotate(5deg) brightness(105%);
+}
+
+.accordion-body {
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  line-height: 1.75;
+  padding-top: 0;
+}
+
+/* sponsors */
+.sponsor-card {
+  background: #fff;
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.3s;
+}
+
+.sponsor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.sponsor-logo {
+  max-height: 55px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.25s;
+}
+
+.sponsor-card:hover .sponsor-logo {
+  transform: scale(1.06);
+}
+
+/* inscription form */
+.inscription-card {
+  background: var(--bg-panel-soft);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2.5rem;
+  border: 1px solid var(--border-soft);
+}
+
+.inscription-card .form-label {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+.inscription-card .form-control,
+.inscription-card .form-select,
+.inscription-card textarea {
+  background: rgba(4, 7, 18, 0.8);
+  border: 1px solid var(--border-mid);
+  border-radius: var(--radius-sm);
+  color: var(--text-main);
+  font-size: 0.9rem;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.inscription-card .form-control:focus,
+.inscription-card .form-select:focus,
+.inscription-card textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(255, 196, 50, 0.18);
+  background: rgba(4, 7, 18, 0.9);
+  color: var(--text-main);
+}
+
+.inscription-card .form-control::placeholder,
+.inscription-card textarea::placeholder {
+  color: #4a5261;
+}
+
+.inscription-card .form-select option {
+  background: var(--bg-panel);
+}
+
+#formMessage.text-success {
+  color: #3adb7a !important;
+}
+
+#formMessage.text-danger {
+  color: #ff6b6b !important;
+}
+
+.inscription-wrapper {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.inscription-intro {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.inscription-intro-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1rem 1.1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  color: var(--text-main);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.inscription-intro-item i {
+  color: var(--accent);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.inscription-card {
+  background: linear-gradient(
+    180deg,
+    rgba(13, 21, 40, 0.96) 0%,
+    rgba(8, 14, 30, 0.98) 100%
+  );
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2.5rem;
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.22);
+}
+
+.inscription-card .form-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.55rem;
+}
+
+.inscription-card .form-control,
+.inscription-card .form-select,
+.inscription-card textarea {
+  min-height: 52px;
+  background: rgba(4, 7, 18, 0.9);
+  border: 1px solid var(--border-mid);
+  border-radius: var(--radius-sm);
+  color: var(--text-main);
+  font-size: 0.92rem;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s,
+    background 0.2s;
+}
+
+.inscription-card textarea {
+  min-height: 140px;
+  resize: vertical;
+  padding-top: 0.9rem;
+}
+
+.inscription-card .form-control:focus,
+.inscription-card .form-select:focus,
+.inscription-card textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(255, 196, 50, 0.16);
+  background: rgba(4, 7, 18, 1);
+  color: var(--text-main);
+}
+
+.inscription-card .form-control::placeholder,
+.inscription-card textarea::placeholder {
+  color: #596274;
+}
+
+.inscription-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.inscription-note {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  max-width: 420px;
+  line-height: 1.6;
+}
+
+#formMessage {
+  min-height: 1.25rem;
+}
+
+@media (max-width: 991.98px) {
+  .inscription-intro {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .inscription-card {
+    padding: 1.5rem;
+  }
+
+  .inscription-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .inscription-actions .btn {
+    width: 100%;
+  }
+
+  .inscription-note {
+    max-width: 100%;
+  }
+}
+
+/* footer */
+.footer-logo {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-main);
+}
+
+.footer-logo span {
+  color: var(--accent);
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-round);
+  transition:
+    color 0.2s,
+    border-color 0.2s,
+    background 0.2s;
+}
+
+.footer-social-link:hover {
+  color: var(--text-main);
+  border-color: var(--border-mid);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.format-highlights {
+  margin-top: 3rem;
+}
+
+.format-highlight-card {
+  background: linear-gradient(
+    180deg,
+    rgba(17, 24, 39, 0.95) 0%,
+    rgba(13, 21, 40, 0.95) 100%
+  );
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  padding: 1.4rem 1.25rem;
+  height: 100%;
+  transition:
+    transform 0.25s ease,
+    border-color 0.2s ease,
+    box-shadow 0.25s ease;
+}
+
+.format-highlight-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 196, 50, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+}
+
+.format-highlight-label {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.format-highlight-title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+  color: var(--text-main);
+}
+
+.format-highlight-text {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.format-highlights {
+  margin-top: 3rem;
+}
+
+.format-highlight-card {
+  background: linear-gradient(
+    180deg,
+    rgba(17, 24, 39, 0.96) 0%,
+    rgba(13, 21, 40, 0.96) 100%
+  );
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  padding: 1.4rem 1.25rem;
+  height: 100%;
+  transition:
+    transform 0.25s ease,
+    border-color 0.2s ease,
+    box-shadow 0.25s ease;
+}
+
+.format-highlight-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 196, 50, 0.24);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
+}
+
+.format-highlight-label {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.format-highlight-title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+  color: var(--text-main);
+}
+
+.format-highlight-text {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
